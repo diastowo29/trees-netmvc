@@ -1,0 +1,10 @@
+/home/diastowo/Documents/DOT NET/fif_api/obj/Debug/netcoreapp2.0/fif_api.csproj.CoreCompileInputs.cache
+/home/diastowo/Documents/DOT NET/fif_api/obj/Debug/netcoreapp2.0/fif_api.AssemblyInfoInputs.cache
+/home/diastowo/Documents/DOT NET/fif_api/obj/Debug/netcoreapp2.0/fif_api.AssemblyInfo.cs
+/home/diastowo/Documents/DOT NET/fif_api/bin/Debug/netcoreapp2.0/fif_api.deps.json
+/home/diastowo/Documents/DOT NET/fif_api/bin/Debug/netcoreapp2.0/fif_api.runtimeconfig.json
+/home/diastowo/Documents/DOT NET/fif_api/bin/Debug/netcoreapp2.0/fif_api.runtimeconfig.dev.json
+/home/diastowo/Documents/DOT NET/fif_api/bin/Debug/netcoreapp2.0/fif_api.dll
+/home/diastowo/Documents/DOT NET/fif_api/bin/Debug/netcoreapp2.0/fif_api.pdb
+/home/diastowo/Documents/DOT NET/fif_api/obj/Debug/netcoreapp2.0/fif_api.dll
+/home/diastowo/Documents/DOT NET/fif_api/obj/Debug/netcoreapp2.0/fif_api.pdb
