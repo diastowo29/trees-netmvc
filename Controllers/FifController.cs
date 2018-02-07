@@ -62,17 +62,19 @@ namespace fif_api.Controllers
             // Console.WriteLine(teamViewModel.ticket_id);
             // Console.WriteLine(teamViewModel.dealer_id);
             // Console.WriteLine(teamViewModel.ticket_level);
-            
+
+            string dealerName = "";
 
             string fileName = @"/home/diastowo/Documents/DOT NET/excel/Dealer Hirarki v3 (Include Region).xlsx";
             List<Dictionary<string, string>> excelContent = readXlsx(fileName);
             for (int i=0; i<excelContent.Count; i++) {
                 if (excelContent[i]["Dealer ID"] == teamViewModel.dealer_id) {
-                    Console.WriteLine(excelContent[i]["Dealer Name"]);
+                    dealerName = excelContent[i]["Dealer Name"].ToString();
+                    // Console.WriteLine(excelContent[i]["Dealer Name"]);
                 }
             }
 
-            return new string[] { "domapping" };
+            return new string[] { dealerName };
         }
 
         public IEnumerable<string> ReadExcel() {
