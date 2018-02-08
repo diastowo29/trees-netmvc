@@ -30,11 +30,12 @@ namespace fif_api.Controllers
 
         string zendeskPassword = "W3lcome123";
 
-        public IEnumerable<string> Index()
+        public IActionResult Index()
         {
             // string users = callApi(zendeskDomain + "/api/v2/users.json");
             // Console.WriteLine(users);
-            return new string[] { "fifController1", "fifController2" };
+            // return new string[] { "fifController1", "fifController2" };
+            return Json(new {foo="bar", baz="Blech"});
         }
 
         public IActionResult About()
@@ -57,29 +58,37 @@ namespace fif_api.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<string> DoMapping([FromBody] TeamViewModel teamViewModel){
+        public IActionResult DoMapping([FromBody] TeamViewModel teamViewModel){
 
             // Console.WriteLine(teamViewModel.ticket_id);
             // Console.WriteLine(teamViewModel.dealer_id);
             // Console.WriteLine(teamViewModel.ticket_level);
-
+            string ticketLevel = teamViewModel.ticket_level;
             string dealerName = "";
+            string dealerId = "";
 
             string fileName = @"/home/diastowo/Documents/DOT NET/excel/Dealer Hirarki v3 (Include Region).xlsx";
             List<Dictionary<string, string>> excelContent = readXlsx(fileName);
             for (int i=0; i<excelContent.Count; i++) {
                 if (excelContent[i]["Dealer ID"] == teamViewModel.dealer_id) {
                     dealerName = excelContent[i]["Dealer Name"].ToString();
-                    // Console.WriteLine(excelContent[i]["Dealer Name"]);
+                    dealerId = excelContent[i]["Dealer ID"].ToString();
+                    if (ticketLevel == "MM") {
+
+                    } else if (ticketLevel == "DH") {
+
+                    } else if (ticketLevel == "BM") {
+
+                    } else {
+
+                    }
                 }
             }
 
-            return new string[] { dealerName };
+            return Json(new {dealer_name=dealerName, dealer_id=dealerId});
         }
 
         public IEnumerable<string> ReadExcel() {
-            
-
             return new string[] { "fif1", "fif2" };
         }
         
